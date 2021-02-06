@@ -202,7 +202,7 @@ function getTodos() {
         if (status === "todo") {
           $("#todo-list").append(`
             <!--start per task / mau loop-->
-            <div class="card mb-3 bg-light shadow-sm" id="todo${value.id}">
+            <div class="card mb-2 bg-light shadow-sm" id="todo${value.id}">
               <div class="card-body p-3">
                       
                 <h5 id="title${value.id}"><!--taskname-->${value.title}</h5>
@@ -242,7 +242,7 @@ function getTodos() {
         } else if (status == "doing") {
           $("#doing-list").append(`
             <!--start per task / mau loop-->
-            <div class="card mb-3 bg-light shadow-sm" id="todo${value.id}">
+            <div class="card mb-2 bg-light shadow-sm" id="todo${value.id}">
               <div class="card-body p-3">
                       
                 <h5 id="title${value.id}"><!--taskname-->${value.title}</h5>
@@ -282,7 +282,7 @@ function getTodos() {
         } else if (status == "done") {
           $("#done-list").append(`
             <!--start per task / mau loop-->
-            <div class="card mb-3 bg-light shadow-sm" id="todo${value.id}">
+            <div class="card mb-2 bg-light shadow-sm" id="todo${value.id}">
               <div class="card-body p-3">
                       
                 <h5 id="title${value.id}"><!--taskname-->${value.title}</h5>
@@ -351,14 +351,14 @@ function getEditTodo(id, title, description, due_date, status) {
   }
   $(`#todo${id}`).empty();
   $(`#todo${id}`).append(`
-  <form  class="card-body p-3 form-inline row g-3 justify-content-center" id="editTodo">
+  <form  class="card-body form-inline g-3 row justify-content-center" id="editTodo">
   <div class="col-md-2">
     <input type="text" value="${title}" class="form-control mb-2" id="editTodoTitle${id}" placeholder="Edit Todo Title">
   </div>
   <div class="col-md-4">
     <input type="text" value="${description}" class="form-control mb-2" id="editTodoDesc${id}" placeholder="Description">
   </div>
-  <div class="col-auto">
+  <div class="col-md-2">
     <!-- <label class="sr-only" for="editTodoStatus">Preference</label> -->
     <select class="form-select mb-2" id="editTodoStatus${id}">
       ${option}

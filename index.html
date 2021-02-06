@@ -17,69 +17,39 @@
     <link rel="icon" href="./assets/favicon.png" sizes="16x16" type="image/png"> 
     <title>FANCY TODO</title>
   </head>
-  <body style="min-height:100vh">
+  <body style="min-height:100vh; padding-top: 70px" class="bg-light">
     <!--NAVBAR LOGGEDOUT-->
-    <nav id="navbar-logout" class=" shadow-sm navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="navbar-logout" class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand bd-highlight" href="#">Fancy Todo</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav justify-content-end">
-            <a id="navbar-register-button" class="nav-link active" aria-current="page" href="#"
-              >Register</a
-            >
-            <a id="navbar-login-button" class="nav-link active" aria-current="page" href="#"
-              >Login</a
-            >
+          <div class="navbar">
+            <a id="navbar-register-button" class="nav-link text-white" aria-current="page" href="#"
+              >Register</a>
+            <a id="navbar-login-button" class="nav-link text-white" aria-current="page" href="#"
+              >Login</a>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </nav>
 
     <!--NAVBAR LOGGEDIN-->
-    <nav id="navbar-login" class=" shadow navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="navbar-login" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand bd-highlight" href="#">Fancy Todo</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav justify-content-end">
-            <a id="navbar-logout-button" class="nav-link active" aria-current="page" href="#"
-              >Logout</a
-            >
+          <div class="navbar">
+            <a id="navbar-logout-button" class="nav-link text-white" href="#"
+              >Logout</a>
           </div>
-        </div>
       </div>
     </nav>
     <!--gutter bs5-->
-    <div class="container px-6 " style="max-width: 1000px; height: 100%">
+    <div class="container" style="max-width: 1000px">
       <!-- <div class="row gx-5">
         <div class="col"> -->
-          <div class="p-3 border bg-light shadow" style="height:100%">
+          <div class="bg-light" style="min-height:100%">
 
             <!--form login-->
-            <div class="p-3 mx-auto" style="max-width: 400px; text-align:center" id="loginContainer">
+            <div class="p-3  mx-auto shadow" style="max-width: 400px; text-align:center" id="loginContainer">
               <form id="login-form" action="#" method="post">
                 <h3>Login</h3>
 
@@ -124,7 +94,7 @@
             </div>
 
             <!--form Registrasi-->
-            <div class="p-3 mx-auto" style="max-width: 400px; text-align:center" id="registerContainer">
+            <div class="p-3 mx-auto shadow" style="max-width: 400px; text-align:center" id="registerContainer">
               <form id="register-form" action="#" method="post">
                 <h3>Register</h3>
                 <br />
@@ -154,8 +124,7 @@
                   >
                 </div>
 
-                <div class="mb-3">
-                  <br />
+                <div class="mb-3 p-3">
                   <input
                     type="submit"
                     id="submitRegister"
@@ -179,7 +148,7 @@
               </h3>
 
               <!--start form new todo-->
-              <div class="card card-border-primary p-3 m-5 shadow">
+              <div class="card card-border-primary p-3 my-5 shadow">
               <form  class="form-inline row g-3 justify-content-center" id="newTodo-form" action="#" method="post">
                   <div class="col-md-2">
                     <!-- <label class="sr-only" for="newTodoTitle">Title</label> -->
@@ -218,7 +187,7 @@
                     <input
                     type="submit"
                     id="submitNewTodo"
-                    class="btn btn-outline-dark btn-md form-control mb-2"
+                    class="btn btn-primary btn-md form-control mb-2"
                     value="Add+"
                   />
                   </div>
@@ -230,7 +199,7 @@
               <div class="container-fluid">
                 <!--todo-->
                 <!--start per board-->
-                <div class="p-3">
+                <div class="mb-3">
                   <div class="card card-border-primary shadow">
                     <div class="card-header">
                       <h4 class="card-title">TODO</h4>
@@ -248,7 +217,7 @@
 
                 <!--DOING-->
                 <!--start per board-->
-                <div class="p-3">
+                <div class="mb-3">
                   <div class="card card-border-primary shadow">
                     <div class="card-header">
                       <h4 class="card-title">DOING</h4>
@@ -265,7 +234,7 @@
 
                 <!--DONE-->
                 <!--start per board-->
-                <div class="p-3">
+                <div class="mb-3">
                   <div class="card card-border-primary shadow">
                     <div class="card-header">
                       <h4 class="card-title">DONE</h4>
@@ -285,7 +254,6 @@
         <!-- </div>
       </div> -->
     </div>
-
     <!-- <footer class="footer">
       <div class="container">
         <span class="text-muted">&copy; 2021 - FANCY TODO</span>
