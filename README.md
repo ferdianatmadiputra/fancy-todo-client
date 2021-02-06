@@ -1,4 +1,6 @@
 # fancy-todo-client
+link: https://ferdianatmadiputra.github.io/fancy-todo-client/
+
 
 
 this is client side app for my fancy todo project,
