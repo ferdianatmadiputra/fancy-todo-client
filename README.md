@@ -2,5 +2,5 @@
 
 
 this is client side app for my fancy todo project,
-for restful api server side app please check 
+and my server side using restful api on this url:
 https://fancy-todo-ferd.herokuapp.com/
